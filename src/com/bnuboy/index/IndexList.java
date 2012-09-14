@@ -36,12 +36,13 @@ public class IndexList extends ListView{
 		
 	}
 	
-	public void list(){
+	public boolean list(){
 		//listView = (ListView)this.findViewById(R.id.titleList);
 		data = getData();
 	    SimpleAdapter sa = new SimpleAdapter(this.getContext(), data, R.layout.liststyle, new String []{"title" , "img"}, new int []{ R.id.leftText,R.id.rightText});
 	    this.setAdapter(sa);
 	    setOnItemClickListener(new IndexListListener());
+	    return true;
 	}
 	
 	private List<Map<String, String>> getData() {
