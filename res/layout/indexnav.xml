@@ -129,6 +129,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="10dip" />
+            
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/test"
+                android:text="登录"
+                android:textSize="12pt" />
         </LinearLayout>
     </LinearLayout>
 

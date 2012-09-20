@@ -24,11 +24,13 @@ import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.AbsListView.OnScrollListener;;
 
-public class ThirdListView extends ListView{
+public class ThirdListView extends ListView implements OnScrollListener {
 	
 	private ListView listView;
 	List<Map<String, String>> data;
@@ -55,6 +57,7 @@ public class ThirdListView extends ListView{
 		data = getData();
 	    SimpleAdapter sa = new SimpleAdapter(this.getContext(), data, R.layout.liststyle, new String []{"title" , "img"}, new int []{ R.id.leftText,R.id.rightText});
 	    this.setAdapter(sa);
+	    setSelection(3);
 	    setOnItemClickListener(new IndexListListener());
 	    return true;
 	}
@@ -120,7 +123,17 @@ public class ThirdListView extends ListView{
 			Intent intent = new Intent(ThirdListView.this.context,ContentActivity.class);
 			intent.putExtras(bundle);
 			ThirdListView.this.context.startActivity(intent);
+			
 		}	
+	}
+	public void onScroll(AbsListView view, int firstVisibleItem,
+			int visibleItemCount, int totalItemCount) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void onScrollStateChanged(AbsListView view, int scrollState) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	

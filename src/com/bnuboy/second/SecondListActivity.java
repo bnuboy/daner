@@ -1,6 +1,9 @@
 package com.bnuboy.second;
 
+import org.apache.http.client.CookieStore;
+
 import com.bnuboy.second.SecondList;
+import com.example.daner.MyApp;
 
 import android.app.Activity;
 import android.content.Intent;

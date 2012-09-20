@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.bnuboy.login.LoginActivity;
 import com.bnuboy.second.SecondListActivity;
 import com.bnuboy.topten.ToptenListActivity;
 import com.example.daner.MainActivity;
@@ -29,7 +30,9 @@ public class IndexNav{
 	private TextView entertainment;
 	private TextView club;
 	private TextView topten;
+	private TextView login;
 	public MainActivity act;
+	
 	
 	public IndexNav(MainActivity ma){
 		this.act = ma;
@@ -44,6 +47,7 @@ public class IndexNav{
         life		  = (TextView)act.findViewById(R.id.life);
         entertainment = (TextView)act.findViewById(R.id.entertainment);
         club          = (TextView)act.findViewById(R.id.club);
+        login         = (TextView)act.findViewById(R.id.login);
         topten.setOnClickListener(navListener);
         bnu.setOnClickListener(navListener);
         infomation.setOnClickListener(navListener);
@@ -53,6 +57,7 @@ public class IndexNav{
         life.setOnClickListener(navListener);
         entertainment.setOnClickListener(navListener);
         club.setOnClickListener(navListener);
+        login.setOnClickListener(navListener);
 	}
 	class NavListener implements OnClickListener{
 
@@ -82,6 +87,8 @@ public class IndexNav{
 				bundle.putString("gid","41");
 			}else if(id == R.id.club){
 				bundle.putString("gid","608");
+			}else if(id == R.id.login){
+				intent.setClass(act, LoginActivity.class);
 			}
 			intent.putExtras(bundle);
 			act.startActivity(intent);
