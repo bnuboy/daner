@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:id="@+id/topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="#0000ff">
+        <TextView 
+            android:id="@+id/tv_newthread"
+            android:layout_width="90dip"
+            android:layout_height="34dip"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="          新话题"
+            android:background="@drawable/pagenav"/>
+        <TextView 
+            android:id="@+id/tv_reply"
+            android:layout_width="90dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="  回复 "
+            android:background="@drawable/nextpage"/>
+    </RelativeLayout>
+    <com.bnuboy.content.ContentListView
+        android:id="@+id/contentListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+
+</LinearLayout>

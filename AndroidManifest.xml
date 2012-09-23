@@ -29,6 +29,7 @@
     	<activity android:name="com.bnuboy.second.SecondListActivity"></activity>
     	<activity android:name="com.bnuboy.third.ThirdListActivity"></activity>
     	<activity android:name="com.bnuboy.login.LoginActivity"></activity>
+    	<activity android:name="com.bnuboy.reply.ReplyActivity"></activity>
     </application>
 	<uses-permission android:name="android.permission.INTERNET"/>
 	

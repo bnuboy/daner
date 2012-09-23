@@ -1,1 +1,17 @@
 http://www.oiegg.com/index.php?gid=169二级导航页面
+
+
+帖子回复提交地址 
+post.php?action=reply&fid=506&tid=1295514&extra=&replysubmit=yes
+fid是二级分类比如人在师大
+tid是帖子的id
+
+
+message是内容
+attach[]附件
+attachperm[]阅读权限
+attachdesc[]附件描述
+localid[] 1
+mysiwyg 1
+fid 
+replysubmit 发表回复

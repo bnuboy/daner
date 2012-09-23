@@ -62,6 +62,7 @@ public class LoginActivity extends Activity {
 	        params.add(new BasicNameValuePair("username", username)); 
 	        params.add(new BasicNameValuePair("password", password));
 	        params.add(new BasicNameValuePair("loginsubmit","true"));
+	        params.add(new BasicNameValuePair("userwap","0"));
 	        try 
 	        { 
 	          httpRequest.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));

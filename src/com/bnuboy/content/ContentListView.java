@@ -21,13 +21,14 @@ import com.example.daner.R;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-public class ContentList extends ListView{
+public class ContentListView extends ListView{
 	
 	private ListView listView;
 	List<Map<String, String>> data;
@@ -38,7 +39,7 @@ public class ContentList extends ListView{
 	private String strEnd;
 	private Context context;
 	private boolean usewap;
-	public ContentList(Context context) {
+	public ContentListView(Context context) {
 		super(context);
 		this.context = context;
 		this.strStart = "";
@@ -46,6 +47,17 @@ public class ContentList extends ListView{
 		this.encode   = "UTF-8";
 		this.usewap   = false;
 	}
+	
+	public ContentListView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		// TODO Auto-generated constructor stub
+		this.context = context;
+		this.strStart = "";
+		this.strEnd   = "";
+		this.encode   = "UTF-8";
+		this.usewap   = false;
+	}
+
 	public void setUsewap(boolean usewap){
 		this.usewap = usewap;
 	}
